@@ -479,7 +479,7 @@ obviel.forms = {};
             contentType: contentType,
             dataType: 'json',
             success: function(data) {
-                self.el.render(data, viewName).done(function() {
+                self.el.render(obviel.registry.transformerHook(data), viewName).done(function() {
                     defer.resolve();
                 });
             }
